@@ -4,18 +4,18 @@
 def minOperations(n):
     if n <= 0:
         return 0
-
-    operation = 0
-    remaining = n
-    character = 1
-
-
-    while remaining > 0:
-        if remaining % character == 0:
-            remaining //= character
-            operation += 1
-        
-        operation += 1
-        character +=1
     
-    return operation
+    operations = 0
+    clipboard = 1  # Start with 1 'H' in the clipboard
+    remaining = n
+
+    for i in range(2, n + 1):
+        while n % i == 0:
+            operations += i
+            n //= i
+            remaining -= i
+            if remaining == 0:
+                return operations
+
+    return operations
+
