@@ -1,10 +1,14 @@
 #!/usr/bin/python3
 """technical interview"""
 
+
 def minOperations(n):
+    '''Computes the fewest number of operations needed to result
+    in exactly n H characters.'''
+
     if n <= 0:
         return 0
-    
+
     operations = 0
     clipboard = 1  # Start with 1 'H' in the clipboard
     remaining = n
@@ -18,4 +22,3 @@ def minOperations(n):
                 return operations
 
     return operations
-
