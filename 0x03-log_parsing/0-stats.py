@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 def print_stats(size, status_codes):
-
+    """Print accumulated metrics."""
     print("File size: {}".format(size))
-    for key in sorted(status_codes[key]):
+    for key in sorted(status_codes):
         print("{}: {}".format(key, status_codes[key]))
+
 
 if __name__ == "__main__":
     import sys
@@ -17,9 +18,9 @@ if __name__ == "__main__":
         for line in sys.stdin:
             if count == 10:
                 print_stats(size, status_codes)
-                count=1
+                count = 1
             else:
-                count +=1
+                count += 1
 
             line = line.split()
 
