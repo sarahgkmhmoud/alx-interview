@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+N queens
+"""
 
 
 from sys import argv
@@ -12,27 +15,15 @@ def print_error_message(message):
 # Validate input
 if len(argv) != 2:
     print_error_message("Usage: ./0-nqueens.py N")
-
+    exit(1)
 try:
     n = int(argv[1])
 except ValueError:
-    print_error_message(f"{argv[1]} must be a number")
-
+    print_error_message('N must be a number')
+    exit(1)
 if n < 4:
-    print_error_message(f"{n} must be at least 4")
-
-# if len(argv) != 2:
-#     print('Usage: nqueens N')
-# n = argv[1]
-
-# if n.isdigit():
-#     n = int(n)
-# else:
-#     print(f'{n} must be a number')
-#     exit(1)
-# if n < 4:
-#     print(f'{n} must be at least 4')
-#     exit(1)
+    print_error_message('N must be at least 4')
+    exit(1)
 
 board = [[0 for _ in range(n)] for _ in range(n)]
 answer = []
