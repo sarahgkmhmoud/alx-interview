@@ -3,9 +3,11 @@
 
 from sys import argv
 
+
 def print_error_message(message):
     print(message)
     exit(1)
+
 
 # Validate input
 if len(argv) != 2:
