@@ -14,7 +14,7 @@ def print_error_message(message):
 
 # Validate input
 if len(argv) != 2:
-    print_error_message("Usage: ./0-nqueens.py N")
+    print_error_message("Usage: nqueens N")
     exit(1)
 try:
     n = int(argv[1])
