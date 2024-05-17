@@ -5,7 +5,7 @@ from sys import argv
 
 n = (argv[1])
 
-if argv.length != 2:
+if len(argv) != 2:
     print('Usage: nqueens N')
 if n.isdigit():
     n = int(n)
